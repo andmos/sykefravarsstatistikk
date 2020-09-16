@@ -3,7 +3,10 @@ export const getMiljø = (): string => {
     if (pathname.includes('arbeidsgiver.nav.no')) {
         return 'prod-sbs';
     }
-    if (pathname.includes('arbeidsgiver-q.nav.no')) {
+    if (
+        pathname.includes('arbeidsgiver-q.nav.no') ||
+        pathname.includes('arbeidsgiver.dev.nav.no')
+    ) {
         return 'dev-sbs';
     }
     return 'local';
