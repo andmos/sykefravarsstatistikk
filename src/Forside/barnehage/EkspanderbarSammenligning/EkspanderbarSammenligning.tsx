@@ -3,7 +3,7 @@ import { RestSummertSykefraværshistorikk } from '../../../api/summertSykefravæ
 import { EkspanderbartSammenligningspanel } from '../SammenligningMedBransje/EkspanderbartSammenligningspanel';
 import { RestStatus } from '../../../api/api-utils';
 import Skeleton from 'react-loading-skeleton';
-import { getSammenligningResultat, summertHistorikkHarBransje } from '../barnehage-utils';
+import { getSammenligningResultat, summertHistorikkHarBransje } from '../vurdering-utils';
 import { SykefraværVurdering } from '../Speedometer/Speedometer';
 import { SammenligningsType } from '../vurderingstekster';
 import { SammenligningIngress } from '../SammenligningIngress/SammenligningIngress';

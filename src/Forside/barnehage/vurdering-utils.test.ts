@@ -2,7 +2,7 @@ import {
     getSammenligningResultat,
     getVurdering,
     Sammenligningsresultater,
-} from './barnehage-utils';
+} from './vurdering-utils';
 import { SykefraværVurdering } from './Speedometer/Speedometer';
 import {
     RestSummertSykefraværshistorikk,
@@ -33,12 +33,6 @@ it('getVurderingForSammenligningMedProsent skal gi riktig resultat', () => {
     expect(getVurdering(4.49, 5)).toEqual(SykefraværVurdering.UNDER);
 });
 
-/*
-    sammenligningVurdering: SykefraværVurdering;
-sykefraværVirksomhet: number | null | undefined;
-sykefraværBransje: number | null | undefined;
-kvartaler: ÅrstallOgKvartal[] | undefined;
- */
 
 describe('Tester for getSammenligningResultat', () => {
     it('getSammenligningResultat - skal gi vurdering FEIL hvis reststatus er FEIL', () => {

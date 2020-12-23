@@ -43,7 +43,7 @@ import { useSetUserProperties } from './amplitude/userProperties';
 import { FeatureTogglesProvider } from './utils/FeatureTogglesContext';
 import Kalkulator from './Kalkulator/Kalkulator/Kalkulator';
 import { Forside } from './Forside/Forside';
-import { SammenligningspanelBarnehage } from './Forside/barnehage/SammenligningspanelBarnehage/SammenligningspanelBarnehage';
+import { Sammenligningspanel } from './Forside/barnehage/SammenligningspanelBarnehage/Sammenligningspanel';
 import {
     summertSykefraværshistorikkContext,
     SummertSykefraværshistorikkProvider,
@@ -168,7 +168,7 @@ const AppContent: FunctionComponent = () => {
                         restOrganisasjonerMedStatistikk={restOrganisasjonerMedStatistikk}
                     >
                         <Forside>
-                            <SammenligningspanelBarnehage
+                            <Sammenligningspanel
                                 restSummertSykefraværshistorikk={restSummertSykefraværshistorikk}
                                 restAltinnOrganisasjoner={restOrganisasjoner}
                             >
@@ -178,7 +178,7 @@ const AppContent: FunctionComponent = () => {
                                     }
                                     restVirksomhetMetadata={restVirksomhetMetadata}
                                 />
-                            </SammenligningspanelBarnehage>
+                            </Sammenligningspanel>
                             <KalkulatorPanel liten />
                             <Historikkpanel />
                             <KursForBarnehager restKursliste={restKursliste} />

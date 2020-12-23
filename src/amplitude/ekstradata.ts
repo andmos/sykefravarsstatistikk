@@ -15,7 +15,7 @@ import { konverterTilKvartalsvisSammenligning } from '../utils/sykefraværshisto
 import { RestOverordnetEnhet } from '../api/enhetsregisteret-api';
 import { mapTilPrivatElleOffentligSektor, Sektor } from '../utils/sektorUtils';
 import { RestSummertSykefraværshistorikk } from '../api/summertSykefraværshistorikk';
-import { getSammenligningResultatMedProsent } from '../Forside/barnehage/barnehage-utils';
+import { getSammenligningResultatMedProsent } from '../Forside/barnehage/vurdering-utils';
 import { SammenligningsType } from '../Forside/barnehage/vurderingstekster';
 
 export interface Ekstradata {
