@@ -1,27 +1,27 @@
 import React, { FunctionComponent } from 'react';
 import { Normaltekst } from 'nav-frontend-typografi';
-import EksternLenke from '../../../felleskomponenter/EksternLenke/EksternLenke';
+import EksternLenke from '../../felleskomponenter/EksternLenke/EksternLenke';
 import kalenderSvg from './kalender.svg';
-import './KursForBarnehager.less';
-import { PaneltittelMedIkon } from '../../../felleskomponenter/PaneltittelMedIkon/PaneltittelMedIkon';
-import { RestKursliste } from '../../../api/kurs-api';
-import { RestStatus } from '../../../api/api-utils';
-import { getNesteIANettkurs } from '../../../api/kurs-utils';
+import './Kurskalender.less';
+import { PaneltittelMedIkon } from '../../felleskomponenter/PaneltittelMedIkon/PaneltittelMedIkon';
+import { RestKursliste } from '../../api/kurs-api';
+import { RestStatus } from '../../api/api-utils';
+import { getNesteIANettkurs } from '../../api/kurs-utils';
 
 interface Props {
     restKursliste: RestKursliste;
 }
-export const KursForBarnehager: FunctionComponent<Props> = (props) => {
+export const Kurskalender: FunctionComponent<Props> = (props) => {
     const nesteIANettkurs = getNesteIANettkurs(
         props.restKursliste.status === RestStatus.Suksess ? props.restKursliste.data : []
     );
 
     return nesteIANettkurs ? (
-        <div className="kurs-for-barnehager">
+        <div className="kurskalender">
             <PaneltittelMedIkon src={kalenderSvg} alt="Kalenderikon">
                 Kurskalender
             </PaneltittelMedIkon>
-            <Normaltekst className="kurs-for-barnehager__tekst">
+            <Normaltekst className="kurskalender__tekst">
                 NAV tilbyr nettkurs, med temaer som forebygging og oppfølging av sykefravær
             </Normaltekst>
 

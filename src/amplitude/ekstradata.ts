@@ -6,7 +6,7 @@ import {
     tilSegmenteringSammenligning,
     tilSegmenteringSykefraværsprosent,
 } from './segmentering';
-import { SykefraværVurdering } from '../Forside/barnehage/Speedometer/Speedometer';
+import { SykefraværVurdering } from '../Forside/Sammenligning/Speedometer/Speedometer';
 import { Bransjetype, RestVirksomhetMetadata } from '../api/virksomhetMetadata';
 import { RestStatus } from '../api/api-utils';
 import { mapTilNæringsbeskrivelse } from './næringsbeskrivelser';
@@ -15,8 +15,8 @@ import { konverterTilKvartalsvisSammenligning } from '../utils/sykefraværshisto
 import { RestOverordnetEnhet } from '../api/enhetsregisteret-api';
 import { mapTilPrivatElleOffentligSektor, Sektor } from '../utils/sektorUtils';
 import { RestSummertSykefraværshistorikk } from '../api/summertSykefraværshistorikk';
-import { getSammenligningResultatMedProsent } from '../Forside/barnehage/vurdering-utils';
-import { SammenligningsType } from '../Forside/barnehage/vurderingstekster';
+import { getSammenligningResultatMedProsent } from '../Forside/Sammenligning/vurdering-utils';
+import { SammenligningsType } from '../Forside/Sammenligning/vurderingstekster';
 
 export interface Ekstradata {
     næring2siffer: string;

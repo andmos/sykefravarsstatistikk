@@ -43,7 +43,7 @@ import { useSetUserProperties } from './amplitude/userProperties';
 import { FeatureTogglesProvider } from './utils/FeatureTogglesContext';
 import Kalkulator from './Kalkulator/Kalkulator/Kalkulator';
 import { Forside } from './Forside/Forside';
-import { Sammenligningspanel } from './Forside/barnehage/SammenligningspanelBarnehage/Sammenligningspanel';
+import { Sammenligningspanel } from './Forside/Sammenligning/Sammenligningspanel/Sammenligningspanel';
 import {
     summertSykefraværshistorikkContext,
     SummertSykefraværshistorikkProvider,
@@ -55,8 +55,8 @@ import {
     EnhetsregisteretProvider,
     EnhetsregisteretState,
 } from './utils/enhetsregisteretContext';
-import { EkspanderbarSammenligning } from './Forside/barnehage/EkspanderbarSammenligning/EkspanderbarSammenligning';
-import { KursForBarnehager } from './Forside/barnehage/KursForBarnehager/KursForBarnehager';
+import { EkspanderbarSammenligning } from './Forside/Sammenligning/EkspanderbarSammenligning/EkspanderbarSammenligning';
+import { Kurskalender } from './Forside/Kurskalender/Kurskalender';
 import { ArbeidsmiljøportalPanel } from './Forside/ArbeidsmiljøportalPanel/ArbeidsmiljøportalPanel';
 import { hentRestKurs, RestKursliste } from './api/kurs-api';
 import {
@@ -181,7 +181,7 @@ const AppContent: FunctionComponent = () => {
                             </Sammenligningspanel>
                             <KalkulatorPanel liten />
                             <Historikkpanel />
-                            <KursForBarnehager restKursliste={restKursliste} />
+                            <Kurskalender restKursliste={restKursliste} />
                             <ArbeidsmiljøportalPanel
                                 restVirksomhetMetadata={restVirksomhetMetadata}
                             />
